@@ -1,5 +1,5 @@
 # kafka-stock-market-aws
-A small project that retrieves stock market data, stores it in AWS S3 and enables AWS Athena to analyze it through SQL.
+A small proof-of-concept project that retrieves stock market data from the AlphaVantage API, sends it to a Kafka producer/consumer setup, stores it in AWS S3 and enables AWS Athena to analyze it through SQL.
 
 ## Kafka setup
 
