@@ -3,13 +3,15 @@ A small project that retrieves stock market data, stores it in AWS S3 and enable
 
 ## Kafka setup
 
-1. Create an EC2 instance on AWS.
+1. Create an EC2 instance on AWS and edit the security group options such that the rules include all traffic from your local machine's IP and the public IP of the EC2 instance. You can also allow all traffic from any IP, although that is considered bad practice.
+
 2. Install Java
 
 ```bash
 sudo yum install java-1.8.0-amazon-corretto
 java -version
 ```
+
 3. Download Kafka 
 
 ```bash
@@ -55,3 +57,6 @@ cd kafka_2.12-3.4.1
 bin/kafka-console-consumer.sh --topic mytopic --bootstrap-server 1.2.3.4:9092
 ```
 
+## Resources
+
+- [Kafka Topics CLI tutorial](https://www.conduktor.io/kafka/kafka-topics-cli-tutorial/) 
