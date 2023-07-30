@@ -57,6 +57,15 @@ cd kafka_2.12-3.4.1
 bin/kafka-console-consumer.sh --topic mytopic --bootstrap-server 1.2.3.4:9092
 ```
 
+## Diagram
+
+![Diagram](Images/diagram.png)
+
+- AWS S3 &rarr; stores object data in buckets
+- AWS Glue Crawler &rarr; scans and discovers the structure, schema, and format of data stored in various data sources like Amazon S3, Amazon RDS, and more. It creates metadata tables in the AWS Glue Data Catalog, facilitating data integration and making it easier to use and process the data in AWS Glue ETL jobs, AWS Athena queries, and other AWS services
+- AWS Glue Data Catalog &rarr; acts as a centralized catalog for storing and organizing metadata about data sources, tables, and schemas
+- AWS Athena &rarr; a serverless query service that enables users to run ad-hoc SQL queries on data stored in Amazon S3
+
 ## Resources
 
 - [Kafka Topics CLI tutorial](https://www.conduktor.io/kafka/kafka-topics-cli-tutorial/) 
